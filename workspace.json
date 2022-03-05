@@ -1,7 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "api": "packages/api",
-    "mq7-sensor": "packages/mq7-sensor"
+    "collector-service": "apps/sensei-collector-service"
   }
 }

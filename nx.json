@@ -1,11 +1,11 @@
 {
   "extends": "@nrwl/workspace/presets/core.json",
-  "npmScope": "sensor-api",
+  "npmScope": "sensei",
   "affected": {
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/node"
   },
   "tasksRunnerOptions": {
     "default": {
@@ -19,5 +19,6 @@
         ]
       }
     }
-  }
+  },
+  "defaultProject": "sensei-collector-service"
 }

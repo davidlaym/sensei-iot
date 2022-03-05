@@ -1,14 +1,15 @@
 module.exports = {
-  displayName: 'mq7-sensor',
+  displayName: 'collector-service',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
     },
   },
+  testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/packages/mq7-sensor',
+  coverageDirectory: '../../coverage/packages/collector-service',
 };

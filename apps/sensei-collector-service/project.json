@@ -1,0 +1,62 @@
+{
+  "root": "apps/sensei-collector-service",
+  "sourceRoot": "apps/sensei-collector-service/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/sensei-collector-service",
+        "main": "apps/sensei-collector-service/src/main.ts",
+        "tsConfig": "apps/sensei-collector-service/tsconfig.app.json",
+        "assets": [
+          "apps/sensei-collector-service/src/assets"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/sensei-collector-service/src/environments/environment.ts",
+              "with": "apps/sensei-collector-service/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "collector-service:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/sensei-collector-service/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/sensei-collector-service"
+      ],
+      "options": {
+        "jestConfig": "apps/sensei-collector-service/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
