@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "dht11-sensor": "libs/dht11-sensor",
     "sensei-collector": "apps/sensei-collector"
   }
 }

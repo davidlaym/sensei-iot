@@ -1,0 +1,29 @@
+{
+  "root": "libs/dht11-sensor",
+  "sourceRoot": "libs/dht11-sensor/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/dht11-sensor/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/dht11-sensor"
+      ],
+      "options": {
+        "jestConfig": "libs/dht11-sensor/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -13,4 +13,41 @@ export const schema = {
       },
     },
   },
+  sensors: {
+    type: 'array',
+    items: {
+      type: 'object',
+      oneOf: [
+        {
+          properties: {
+            dht11: {
+              type: 'object',
+              properties: {
+                name: {
+                  type: 'string',
+                },
+                enabled: {
+                  type: 'boolean',
+                },
+                bcmPort: {
+                  type: 'integer',
+                },
+                pollingSeconds: {
+                  type: 'integer',
+                },
+                tempEnabled: {
+                  type: 'boolean',
+                  default: true,
+                },
+                hrEnabled: {
+                  type: 'boolean',
+                  default: true,
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
 };
