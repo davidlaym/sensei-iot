@@ -11,22 +11,13 @@
       "options": {
         "outputPath": "dist/apps/sensei-collector",
         "main": "apps/sensei-collector/src/main.ts",
-        "tsConfig": "apps/sensei-collector/tsconfig.app.json",
-        "assets": [
-          "apps/sensei-collector/src/assets"
-        ]
+        "tsConfig": "apps/sensei-collector/tsconfig.app.json"
       },
       "configurations": {
         "production": {
           "optimization": true,
           "extractLicenses": true,
-          "inspect": false,
-          "fileReplacements": [
-            {
-              "replace": "apps/sensei-collector/src/environments/environment.ts",
-              "with": "apps/sensei-collector/src/environments/environment.prod.ts"
-            }
-          ]
+          "inspect": false
         }
       }
     },
