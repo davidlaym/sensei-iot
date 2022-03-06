@@ -1,6 +1,6 @@
 {
-  "root": "apps/sensei-collector-service",
-  "sourceRoot": "apps/sensei-collector-service/src",
+  "root": "apps/sensei-collector",
+  "sourceRoot": "apps/sensei-collector/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/sensei-collector-service",
-        "main": "apps/sensei-collector-service/src/main.ts",
-        "tsConfig": "apps/sensei-collector-service/tsconfig.app.json",
+        "outputPath": "dist/apps/sensei-collector",
+        "main": "apps/sensei-collector/src/main.ts",
+        "tsConfig": "apps/sensei-collector/tsconfig.app.json",
         "assets": [
-          "apps/sensei-collector-service/src/assets"
+          "apps/sensei-collector/src/assets"
         ]
       },
       "configurations": {
@@ -23,17 +23,17 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/sensei-collector-service/src/environments/environment.ts",
-              "with": "apps/sensei-collector-service/src/environments/environment.prod.ts"
+              "replace": "apps/sensei-collector/src/environments/environment.ts",
+              "with": "apps/sensei-collector/src/environments/environment.prod.ts"
             }
           ]
         }
       }
     },
     "serve": {
-      "executor": "@nrwl/node:execute",
+      "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "collector-service:build"
+        "buildTarget": "sensei-collector:build"
       }
     },
     "lint": {
@@ -43,17 +43,17 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/sensei-collector-service/**/*.ts"
+          "apps/sensei-collector/**/*.ts"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": [
-        "coverage/apps/sensei-collector-service"
+        "coverage/apps/sensei-collector"
       ],
       "options": {
-        "jestConfig": "apps/sensei-collector-service/jest.config.js",
+        "jestConfig": "apps/sensei-collector/jest.config.js",
         "passWithNoTests": true
       }
     }

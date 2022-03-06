@@ -1,6 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "collector-service": "apps/sensei-collector-service"
+    "sensei-collector": "apps/sensei-collector"
   }
 }
